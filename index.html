@@ -17,7 +17,11 @@
     }
 
     .container {
-      margin-top: 100px;
+      min-height: 100vh; /* IMPORTANT FIX */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     h1 {
@@ -45,6 +49,18 @@
     .btn:hover {
       background: #ddd;
     }
+
+    /* About Section */
+    .about {
+      background: white;
+      color: black;
+      padding: 50px 20px;
+    }
+
+    .about p {
+      max-width: 600px;
+      margin: auto;
+    }
   </style>
 </head>
 
@@ -59,9 +75,9 @@
   </div>
 
   <!-- About Section -->
-  <div style="margin-top: 80px;">
+  <div class="about">
     <h2>About Me</h2>
-    <p style="max-width: 600px; margin: auto;">
+    <p>
       I'm currently learning web development and building my skills step by step.
       I enjoy creating simple and clean websites, and this is my first live project.
     </p>
