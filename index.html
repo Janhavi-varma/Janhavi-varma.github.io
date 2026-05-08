@@ -9,9 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
+
     html {
-  scroll-behavior: smooth;
-}
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -55,6 +57,7 @@
 
     .btn:hover {
       background: #ddd;
+      transform: scale(1.05);
     }
 
     /* About Section */
@@ -77,12 +80,39 @@
       line-height: 1.6;
     }
 
+    /* Contact Section */
+    .contact {
+      padding: 70px 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 22px;
+      background: white;
+      color: #333;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #ddd;
+      transform: scale(1.05);
+    }
+
     /* Footer */
     .footer {
       padding: 20px;
       font-size: 14px;
-      opacity: 0.8;
+      opacity: 0.7;
     }
+
   </style>
 </head>
 
@@ -91,18 +121,44 @@
   <!-- Main Section -->
   <div class="container">
     <h1>Hi, I'm Janhavi 👋</h1>
-    <p>Learning Web Development & Building My First Projects</p>
 
-    <a href="https://github.com/janhavi-varma" class="btn">View My GitHub</a>
+    <p>
+      Learning Web Development & Building My First Projects
+    </p>
+
+    <a href="https://github.com/janhavi-varma" class="btn">
+      View My GitHub
+    </a>
   </div>
 
   <!-- About Section -->
   <div class="about">
     <h2>About Me</h2>
+
     <p>
       I'm currently learning web development and building my skills step by step.
       I enjoy creating simple and clean websites, and this is my first live project.
     </p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact">
+    <h2>Contact Me</h2>
+
+    <p>
+      Email:
+      <a href="mailto:janvi.varma.fsm@gmail.com">
+        janvi.varma.fsm@gmail.com
+      </a>
+    </p>
+
+    <a href="https://github.com/janhavi-varma" class="contact-btn">
+      GitHub
+    </a>
+
+    <a href="https://linkedin.com" class="contact-btn">
+      LinkedIn
+    </a>
   </div>
 
   <!-- Footer -->
