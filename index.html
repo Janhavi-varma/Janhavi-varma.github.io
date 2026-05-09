@@ -65,25 +65,21 @@
     }
 
     /* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
 
-    .about {
-      background: white;
-      color: black;
-      padding: 60px 20px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      margin-top: 50px;
-    }
+.about-box {
+  background: white;
+  color: black;
+  width: 500px;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
 
-    .about h2 {
-      margin-bottom: 15px;
-    }
-
-    .about p {
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-    }
 
     /* Contact Section */
 
@@ -118,27 +114,27 @@
       transform: scale(1.05);
     }
     
-    /* Projects Section */
-
+   /* Projects Section */
 .projects {
-  background: #f4f4f4;
-  color: black;
-  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
 }
 
 .project-card {
   background: white;
-  max-width: 400px;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: black;
+  width: 500px;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-.project-card h3 {
-  margin-bottom: 10px;
+.project-card:hover {
+  transform: translateY(-8px);
 }
-
     /* Footer */
 
     .footer {
@@ -168,9 +164,10 @@
 
   </div>
 
-  <!-- About Section -->
+<!-- About Section -->
+<div class="about">
 
-  <div class="about">
+  <div class="about-box">
 
     <h2>About Me</h2>
 
@@ -179,7 +176,9 @@
       I enjoy creating simple and clean websites, and this is my first live project.
     </p>
 
-  </div> 
+  </div>
+
+</div>
   
 <!-- Projects Section -->
 <div class="projects">
