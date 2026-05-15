@@ -23,31 +23,38 @@
       text-align: center;
     }
 
-    
-    /* Navbar */
+/* Navbar */
 
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  width: 100%;
+  padding: 20px 40px;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
+.logo {
+  font-size: 24px;
   font-weight: bold;
+  color: white;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: #ddd;
-  transform: scale(1.1);
 }
     
     /* Main Section */
@@ -241,17 +248,18 @@
 </head>
 
 <body>
-  <!-- Navbar -->
+<!-- Navbar -->
+<div class="navbar">
 
-<nav class="navbar">
+  <div class="logo">Janhavi</div>
 
-  <a href="#">Home</a>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-</nav>
+</div>
 
   <!-- Hero Section -->
 
