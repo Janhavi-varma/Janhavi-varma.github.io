@@ -23,6 +23,33 @@
       text-align: center;
     }
 
+    
+    /* Navbar */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ddd;
+  transform: scale(1.1);
+}
+    
     /* Main Section */
 
     .container {
@@ -214,6 +241,17 @@
 </head>
 
 <body>
+  <!-- Navbar -->
+
+<nav class="navbar">
+
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+
+</nav>
 
   <!-- Hero Section -->
 
@@ -231,7 +269,7 @@
   </div>
 
 <!-- About Section -->
-<div class="about">
+<div class="about" id="about">
 
   <div class="about-box">
 
@@ -247,7 +285,7 @@
 </div>
   
 <!-- Projects Section -->
-<div class="projects">
+<div class="projects" id="projects">
 
   <h2>My Projects</h2>
 
@@ -269,7 +307,7 @@
 
   <!-- Contact Section -->
 
-  <div class="contact">
+ <div class="contact" id="contact">
 
     <h2>Contact Me</h2>
 
@@ -287,7 +325,7 @@
 
   </div> 
   <!-- Skills Section -->
-<div class="skills">
+<div class="skills" id="skills">
 
   <h2>My Skills</h2>
 
