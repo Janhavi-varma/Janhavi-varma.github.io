@@ -286,6 +286,24 @@
   background: white;
   color: black;
 }
+    /* Typing Animation */
+
+#typing-text {
+  font-size: 22px;
+  font-weight: 500;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  margin: auto;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
   </style>
 </head>
@@ -310,9 +328,7 @@
   <div class="container">
 
    <img src="profile.jpg" alt="Janhavi" class="profile-pic">
-    <p>
-      Learning Web Development & Building My First Projects
-    </p>
+   <p id="typing-text"></p>
 
     <a href="https://github.com/janhavi-varma" class="btn">
       View My GitHub
@@ -415,7 +431,47 @@ toggleBtn.addEventListener("click", () => {
 });
 
 </script>
-  
+  <script>
 
-</body>
+const texts = [
+  "Learning Web Development...",
+  "Building Frontend Projects...",
+  "Creating Modern UI..."
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+
+  if(count === texts.length) {
+    count = 0;
+  }
+
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById("typing-text").textContent = letter;
+
+  if(letter.length === currentText.length) {
+
+    setTimeout(() => {
+      count++;
+      index = 0;
+      type();
+    }, 1500);
+
+  } else {
+
+    setTimeout(type, 100);
+
+  }
+
+})();
+
+</script>
+  
+  </body>
 </html>
