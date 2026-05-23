@@ -8,7 +8,7 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
 
     html {
@@ -304,6 +304,42 @@
     border-color: transparent;
   }
 }
+    /* Social Icons */
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ddd;
+}
+
+/* Profile Glow */
+
+.profile-img {
+  box-shadow: 0 0 30px rgba(255,255,255,0.5);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+
+  from {
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  }
+
+  to {
+    box-shadow: 0 0 40px rgba(255,255,255,0.8);
+  }
+
+}
 
   </style>
 </head>
@@ -335,6 +371,17 @@
     </a>
 
   </div>
+  <div class="social-icons">
+
+  <a href="https://github.com/janhavi-varma">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://linkedin.com">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+</div>
 
 <!-- About Section -->
 <div class="about" id="about">
