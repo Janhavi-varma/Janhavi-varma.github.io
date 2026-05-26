@@ -59,14 +59,15 @@
     
     /* Main Section */
 
-    .container {
-  padding: 120px 20px;
+.container {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 80px;
+  gap: 50px;
+  flex-wrap: wrap;
 }
-
     h1 {
       font-size: 40px;
       margin-bottom: 10px;
@@ -78,6 +79,28 @@
       max-width: 600px;
       margin: auto;
     }
+    /* Hero Text */
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* Hero Image */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+}
 
     /* Main Button */
 
@@ -368,23 +391,39 @@ cursor: pointer;
 
   <div class="container">
 
-   <img src="profile.jpg" alt="Janhavi" class="profile-pic">
-   <p id="typing-text"></p>
+  <!-- Left Side -->
+
+  <div class="hero-text">
+
+    <h1>Hi, I'm Janhavi 👋</h1>
+
+    <p id="typing-text"></p>
 
     <a href="https://github.com/janhavi-varma" class="btn">
       View My GitHub
     </a>
 
+    <div class="social-icons">
+
+      <a href="https://github.com/janhavi-varma">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://linkedin.com">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+    </div>
+
   </div>
-  <div class="social-icons">
 
-  <a href="https://github.com/janhavi-varma">
-    <i class="fab fa-github"></i>
-  </a>
+  <!-- Right Side -->
 
-  <a href="https://linkedin.com">
-    <i class="fab fa-linkedin"></i>
-  </a>
+  <div class="hero-image">
+
+    <img src="profile.jpg" alt="Janhavi" class="profile-pic">
+
+  </div>
 
 </div>
 
