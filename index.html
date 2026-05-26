@@ -1,424 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Janhavi Varma</title>
+<title>Janhavi Varma</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb);
-      color: white;
-      text-align: center;
-      background-size: 400% 400%;
-animation: gradientBG 10s ease infinite;
-    }
-    @keyframes gradientBG {
+<style>
 
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Navbar */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-sizing: border-box;
+html{
+  scroll-behavior:smooth;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#061b45,#123c8d,#4b1ea7);
+  background-size:400% 400%;
+  animation:gradientBG 12s ease infinite;
+  color:white;
+  overflow-x:hidden;
 }
 
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
-.nav-links a:hover {
-  color: #ddd;
-}
-    
-    /* Main Section */
+/* NAVBAR */
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: auto;
-    }
-    /* Hero Text */
-
-.hero-text {
-  flex: 1;
-  text-align: left;
+.navbar{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  padding:20px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  z-index:1000;
 }
 
-/* Hero Image */
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+.logo{
+  font-size:32px;
+  font-weight:700;
 }
 
-.profile-pic {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
 }
 
-    /* Main Button */
-
-    .btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 25px;
-      background: white;
-      color: #333;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-.btn:hover,
-.contact-btn:hover {
-  background: #ddd;
-  transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(255,255,255,0.6);
-}   
-    /* Profile Image */
-
-.profile-pic {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  margin-bottom: 20px;
-  box-shadow: 0 0 25px rgba(255,255,255,0.4);
-  transition: 0.3s;
+.nav-links a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
 }
 
-.profile-pic:hover {
-  transform: scale(1.05);
+.nav-links a:hover{
+  color:#c9d8ff;
 }
 
-    /* About Section */
-.about {
-  display: flex;
-  justify-content: center;
-  padding: 80px 20px;
+#theme-toggle{
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  background:white;
+  transition:0.3s;
 }
 
-.about-box {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  color: white;
-  width: 500px;
-  padding: 40px;
-  border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(255,255,255,0.2);
-  transition: 0.4s ease;
-cursor: pointer;
+#theme-toggle:hover{
+  transform:scale(1.1);
 }
 
-    /* Contact Section */
+/* HERO SECTION */
 
-    .contact {
-      padding: 70px 20px;
-    }
-
-    .contact h2 {
-      margin-bottom: 20px;
-    }
-
-    .email {
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 22px;
-      background: white;
-      color: #333;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .contact-btn:hover {
-      background: #ddd;
-      transform: scale(1.05);
-    }
-    
-    /* Skills Section */
-
-.skills {
-  padding: 120px 20px 80px;
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:120px 7%;
+  gap:60px;
+  flex-wrap:wrap;
 }
 
-.skills-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 30px;
+.hero-left{
+  flex:1;
+  min-width:300px;
+  animation:slideLeft 1.2s ease;
 }
 
-.skills-box span {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: 0.3s;
+.hero-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  animation:slideRight 1.2s ease;
 }
 
-.skills-box span:hover {
-  transform: scale(1.1);
-  background: #ddd;
-}
-    
-   /* Projects Section */
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 20px;
+.small-text{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
+  margin-bottom:25px;
+  font-size:14px;
 }
 
-.project-card {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  color: white;
-  width: 500px;
-  padding: 40px;
-  border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-       .project-card:hover {
-   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(255,255,255,0.2);
-}
+.hero h1{
+  font-size:70px;
+  line-height:1.1;
+  margin-bottom:20px;
 }
 
-
-    /* Footer */
-
-   .footer {
-  margin-top: 60px;
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-    .container,
-.about-box,
-.project-card,
-.contact {
-  animation: fadeIn 1.5s ease;
+.hero h1 span{
+  color:#ffd166;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-    /* Theme Toggle */
-
-#theme-toggle {
-  margin-left: 20px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  background: white;
-  transition: 0.3s;
+#typing-text{
+  font-size:30px;
+  font-weight:600;
+  margin-bottom:25px;
+  min-height:45px;
+  border-right:3px solid white;
+  display:inline-block;
+  padding-right:5px;
 }
 
-#theme-toggle:hover {
-  transform: scale(1.1);
+.hero-desc{
+  max-width:600px;
+  font-size:18px;
+  line-height:1.8;
+  color:#e2e2e2;
+  margin-bottom:35px;
 }
 
-/* Light Mode */
-
-.light-mode {
-  background: #f5f5f5;
-  color: black;
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:35px;
 }
 
-.light-mode .navbar {
-  background: rgba(0,0,0,0.1);
+.btn{
+  padding:15px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.4s;
 }
 
+.primary-btn{
+  background:white;
+  color:#111;
+}
+
+.secondary-btn{
+  border:2px solid rgba(255,255,255,0.3);
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(255,255,255,0.2);
+}
+
+.social-icons{
+  display:flex;
+  gap:20px;
+}
+
+.social-icons a{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  text-decoration:none;
+  font-size:22px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  transform:scale(1.15);
+  background:white;
+  color:#111;
+}
+
+.profile-pic{
+  width:380px;
+  height:380px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid white;
+  box-shadow:0 0 50px rgba(255,255,255,0.4);
+  animation:float 4s ease-in-out infinite;
+}
+
+/* STATS */
+
+.stats{
+  width:86%;
+  margin:auto;
+  margin-top:-60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.stat-box{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:25px;
+  padding:35px;
+  transition:0.4s;
+}
+
+.stat-box:hover{
+  transform:translateY(-10px);
+}
+
+.stat-box h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.stat-box p{
+  color:#ddd;
+}
+
+/* SECTIONS */
+
+.section{
+  padding:120px 7%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:48px;
+  margin-bottom:70px;
+}
+
+/* ABOUT */
+
+.about-box{
+  max-width:900px;
+  margin:auto;
+  background:rgba(255,255,255,0.08);
+  padding:50px;
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  line-height:2;
+  font-size:18px;
+}
+
+/* SKILLS */
+
+.skills-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.skill{
+  padding:15px 28px;
+  border-radius:40px;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.15);
+  transition:0.3s;
+  font-weight:600;
+}
+
+.skill:hover{
+  transform:scale(1.1);
+  background:white;
+  color:#111;
+}
+
+/* PROJECTS */
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+.project-card{
+  background:rgba(255,255,255,0.08);
+  border-radius:30px;
+  padding:35px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.15);
+  transition:0.4s;
+  text-align:left;
+}
+
+.project-card:hover{
+  transform:translateY(-12px);
+}
+
+.project-card h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.project-card p{
+  line-height:1.8;
+  color:#ddd;
+  margin-bottom:25px;
+}
+
+/* CONTACT */
+
+.contact-box{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+  background:rgba(255,255,255,0.08);
+  padding:60px;
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+}
+
+.contact-box h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.contact-box p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.7;
+}
+
+/* LIGHT MODE */
+
+.light-mode{
+  background:#f5f7ff;
+  color:#111;
+}
+
+.light-mode .navbar{
+  background:rgba(255,255,255,0.8);
+}
+
+.light-mode .nav-links a,
+.light-mode .logo{
+  color:#111;
+}
+
+.light-mode .small-text,
 .light-mode .about-box,
-.light-mode .project-card {
-  background: white;
-  color: black;
+.light-mode .project-card,
+.light-mode .stat-box,
+.light-mode .contact-box,
+.light-mode .skill{
+  background:white;
+  color:#111;
 }
 
-.light-mode .skills-box span {
-  background: white;
-  color: black;
-}
-    /* Typing Animation */
-
-#typing-text {
-  font-size: 22px;
-  font-weight: 500;
-  border-right: 3px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  width: fit-content;
-  margin: auto;
-  animation: blink 0.8s infinite;
+.light-mode .hero-desc,
+.light-mode .project-card p,
+.light-mode .stat-box p{
+  color:#444;
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
+.light-mode .secondary-btn{
+  border:2px solid #111;
+  color:#111;
+}
+
+.light-mode .social-icons a{
+  background:white;
+  color:#111;
+}
+
+/* ANIMATIONS */
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes slideLeft{
+  from{
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
   }
 }
-    /* Social Icons */
 
-.social-icons {
-  margin-top: 25px;
+@keyframes slideRight{
+  from{
+    opacity:0;
+    transform:translateX(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
 }
 
-.social-icons a {
-  color: white;
-  font-size: 30px;
-  margin: 0 15px;
-  transition: 0.3s;
-}
+/* MOBILE */
 
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #ddd;
-}
+@media(max-width:900px){
 
-/* Profile Glow */
-
-.profile-img {
-  box-shadow: 0 0 30px rgba(255,255,255,0.5);
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-
-  from {
-    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:150px;
   }
 
-  to {
-    box-shadow: 0 0 40px rgba(255,255,255,0.8);
+  .hero-left{
+    text-align:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .social-icons{
+    justify-content:center;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .profile-pic{
+    width:260px;
+    height:260px;
+  }
+
+  .navbar{
+    padding:20px;
+  }
+
+  .nav-links{
+    gap:15px;
   }
 
 }
 
-  </style>
+</style>
 </head>
 
 <body>
-<!-- Navbar -->
+
+<!-- NAVBAR -->
+
 <div class="navbar">
 
   <div class="logo">Janhavi Varma</div>
 
   <div class="nav-links">
+
     <button id="theme-toggle">🌙</button>
+
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+
   </div>
 
 </div>
 
-  <!-- Hero Section -->
+<!-- HERO -->
 
-  <div class="container">
+<section class="hero">
 
-  <!-- Left Side -->
+  <div class="hero-left">
 
-  <div class="hero-text">
+    <div class="small-text">
+      🚀 Frontend Developer
+    </div>
 
-    <h1>Hi, I'm Janhavi 👋</h1>
+    <h1>
+      Hi, I'm <span>Janhavi 👋</span>
+    </h1>
 
-    <p id="typing-text"></p>
+    <div id="typing-text"></div>
 
-    <a href="https://github.com/janhavi-varma" class="btn">
+    <p class="hero-desc">
+      I'm a passionate web developer who loves creating beautiful,
+      responsive and interactive websites while learning modern frontend development step by step.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="https://github.com/janhavi-varma"
+      class="btn primary-btn">
       View My GitHub
-    </a>
+      </a>
+
+      <a href="#projects"
+      class="btn secondary-btn">
+      Explore Projects
+      </a>
+
+    </div>
 
     <div class="social-icons">
 
@@ -427,102 +544,170 @@ cursor: pointer;
       </a>
 
       <a href="https://linkedin.com">
-        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-linkedin-in"></i>
       </a>
 
     </div>
 
   </div>
 
-  <!-- Right Side -->
+  <div class="hero-right">
 
-  <div class="hero-image">
-
-    <img src="profile.jpg" alt="Janhavi" class="profile-pic">
+    <img src="profile.jpg"
+    alt="Janhavi"
+    class="profile-pic">
 
   </div>
 
-</div>
+</section>
 
-<!-- About Section -->
-<div class="about" id="about">
+<!-- STATS -->
+
+<section class="stats">
+
+  <div class="stat-box">
+    <h2>10+</h2>
+    <p>Projects Built</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>200+</h2>
+    <p>Hours Practiced</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>15+</h2>
+    <p>Technologies Exploring</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>1+</h2>
+    <p>Years Learning</p>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+  <h2 class="section-title">About Me</h2>
 
   <div class="about-box">
 
-    <h2>About Me</h2>
-
     <p>
-      I'm currently learning web development and building my skills step by step.
-      I enjoy creating simple and clean websites, and this is my first live project.
+      I'm currently learning web development and improving my frontend skills every day.
+      I enjoy creating interactive websites, experimenting with UI design,
+      and building modern projects using HTML, CSS and JavaScript.
     </p>
 
   </div>
 
-</div>
-  
-<!-- Projects Section -->
-<div class="projects" id="projects">
+</section>
 
-  <h2>My Projects</h2>
+<!-- SKILLS -->
 
-  <div class="project-card">
+<section class="section" id="skills">
 
-    <h3>Portfolio Website</h3>
+  <h2 class="section-title">My Skills</h2>
 
-    <p>
-      My first personal portfolio website built using HTML and CSS.
-    </p>
+  <div class="skills-container">
 
-    <a href="https://janhavi-varma.github.io/" class="contact-btn">
-      View Project
-    </a>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">GitHub</div>
+    <div class="skill">Responsive Design</div>
+    <div class="skill">VS Code</div>
+    <div class="skill">UI Design</div>
+    <div class="skill">Frontend Development</div>
 
   </div>
 
-</div>
+</section>
 
-  <!-- Contact Section -->
+<!-- PROJECTS -->
 
- <div class="contact" id="contact">
+<section class="section" id="projects">
+
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+
+      <h3>Portfolio Website</h3>
+
+      <p>
+        My personal portfolio website with dark mode,
+        animations, interactive UI and responsive design.
+      </p>
+
+      <a href="https://janhavi-varma.github.io/"
+      class="btn primary-btn">
+      Live Website
+      </a>
+
+    </div>
+
+    <div class="project-card">
+
+      <h3>Learning Journey</h3>
+
+      <p>
+        Sharing my daily web development progress and building projects publicly while improving my coding skills.
+      </p>
+
+      <a href="https://github.com/janhavi-varma"
+      class="btn primary-btn">
+      GitHub Repo
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+  <div class="contact-box">
 
     <h2>Contact Me</h2>
 
-    <p class="email">
+    <p>
       📧 janvi.varma.fsm@gmail.com
     </p>
 
-    <a href="https://github.com/janhavi-varma" class="contact-btn">
+    <div class="hero-buttons" style="justify-content:center;">
+
+      <a href="https://github.com/janhavi-varma"
+      class="btn primary-btn">
       GitHub
-    </a>
+      </a>
 
-    <a href="https://www.linkedin.com/" class="contact-btn">
+      <a href="https://linkedin.com"
+      class="btn secondary-btn">
       LinkedIn
-    </a>
+      </a>
 
-  </div> 
-  <!-- Skills Section -->
-<div class="skills" id="skills">
-
-  <h2>My Skills</h2>
-
-  <div class="skills-box">
-
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>GitHub</span>
-    <span>Responsive Design</span>
-    <span>VS Code</span>
+    </div>
 
   </div>
 
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+  © 2026 Janhavi Varma
 </div>
 
-  <!-- Footer -->
+<script>
 
-  <div class="footer">
-    © 2026 Janhavi Varma
-  </div>
-  <script>
+/* DARK LIGHT MODE */
 
 const toggleBtn = document.getElementById("theme-toggle");
 
@@ -530,7 +715,7 @@ toggleBtn.addEventListener("click", () => {
 
   document.body.classList.toggle("light-mode");
 
-  if(document.body.classList.contains("light-mode")) {
+  if(document.body.classList.contains("light-mode")){
     toggleBtn.innerHTML = "☀️";
   } else {
     toggleBtn.innerHTML = "🌙";
@@ -538,14 +723,13 @@ toggleBtn.addEventListener("click", () => {
 
 });
 
-</script>
-  <script>
+/* TYPING EFFECT */
 
 const texts = [
+  "Building Interactive Websites",
   "Frontend Developer",
-  "UI Enthusiast",
   "Learning Full Stack",
-  "Building Interactive Websites"
+  "Creating Modern UI"
 ];
 
 let count = 0;
@@ -553,9 +737,9 @@ let index = 0;
 let currentText = "";
 let letter = "";
 
-(function type() {
+(function type(){
 
-  if(count === texts.length) {
+  if(count === texts.length){
     count = 0;
   }
 
@@ -564,23 +748,25 @@ let letter = "";
 
   document.getElementById("typing-text").textContent = letter;
 
-  if(letter.length === currentText.length) {
+  if(letter.length === currentText.length){
 
     setTimeout(() => {
+
       count++;
       index = 0;
       type();
-    }, 1500);
+
+    },1500);
 
   } else {
 
-    setTimeout(type, 100);
+    setTimeout(type,100);
 
   }
 
 })();
 
 </script>
-  
-  </body>
+
+</body>
 </html>
